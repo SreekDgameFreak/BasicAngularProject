@@ -5,6 +5,10 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div>
       <h1>Upcoming Angular Events</h1>
+      <!-- CSS encapsulation demonstartion-->
+      <!-- <div class="well">
+        <div>Hello World</div>
+      </div> -->
       <hr>
       <!-- #thumbnail is the template reference varialbe that can be used to access eventThumbnail Components public properties and methods in events list component -->
       <event-thumbnail #thumbnail [event]="event1"></event-thumbnail>

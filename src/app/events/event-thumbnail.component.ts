@@ -2,7 +2,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'event-thumbnail',
-  templateUrl: './event-thumbnail.component.html'
+  templateUrl: './event-thumbnail.component.html',
+  styles: [`
+    .pad-left { margin-left: 5px;  }
+    .well div { color: #bbb; }
+    `
+  ]
 })
 export class EventThumbnailComponent implements OnInit {
   
