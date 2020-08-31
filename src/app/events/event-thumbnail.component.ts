@@ -38,4 +38,21 @@ export class EventThumbnailComponent implements OnInit {
   //   console.log('foo');
   // }
 
+  getStartTimeClass() {
+    
+    // Return object with classes
+    // const isEarlyStart = this.event && this.event.time === '8:00 am';
+    // return {green: isEarlyStart, bold: isEarlyStart}
+    
+    // Return string of space-separated classes
+    // if(this.event && this.event.time === '8:00 am')
+    //   return "green bold";
+    // return "";
+    
+    // Return array of strings withe required classes
+    if(this.event && this.event.time === '8:00 am')
+      return ['green','bold'];
+    return [];
+  }
+
 }
