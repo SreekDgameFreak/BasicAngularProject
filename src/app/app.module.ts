@@ -33,8 +33,18 @@ import { ErrorNotFoundComponent } from './errors/error-not-found.component';
   providers: [
     EventService,
     ToastrService,
-    EventRouteActivatorService
+    EventRouteActivatorService,
+    {
+      provide: 'canDeactivateCreateEvent' , 
+      useValue: checkDirtyState
+    }
   ],
   bootstrap: [EventsAppComponent]
 })
 export class AppModule { }
+
+export function checkDirtyState (createEvent:CreateEventComponent) {
+  if(createEvent.isDirty)
+    return window.confirm('You have not saved this event, do you really want to cancel?');
+  return true;
+}

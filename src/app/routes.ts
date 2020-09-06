@@ -8,7 +8,8 @@ import { EventRouteActivatorService } from './events/event-details/event-route-a
 
 export const appRoutes:Routes = [
     {
-        path : 'events/new' , component: CreateEventComponent
+        path : 'events/new' , component: CreateEventComponent,
+        canDeactivate: ['canDeactivateCreateEvent']
     },
     {
         path : 'events', component: EventsListComponent
