@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router'
+import { RouterModule } from '@angular/router';
 
 import { EventsAppComponent } from './events-app.component';
 import { EventsListComponent } from './events/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail.component';
-import { NavbarComponent } from './nav/navbar.component'
-import { EventService } from './events/shared/event.service'
+import { NavbarComponent } from './nav/navbar.component';
+import { EventService } from './events/shared/event.service';
+import { EventRouteActivatorService } from './events/event-details/event-route-activator.service';
 import { ToastrService } from './common/toastr.service';
-import { EventDetailsComponent } from './events/event-details/event-details.component'
+import { EventDetailsComponent } from './events/event-details/event-details.component';
 import{ appRoutes } from './routes';
-import { CreateEventComponent } from './events/create-event/create-event.component'
+import { CreateEventComponent } from './events/create-event/create-event.component';
+import { ErrorNotFoundComponent } from './errors/error-not-found.component';
 
 
 @NgModule({
@@ -24,12 +26,14 @@ import { CreateEventComponent } from './events/create-event/create-event.compone
     EventThumbnailComponent,
     NavbarComponent,
     EventDetailsComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    ErrorNotFoundComponent
   ],
   
   providers: [
     EventService,
-    ToastrService
+    ToastrService,
+    EventRouteActivatorService
   ],
   bootstrap: [EventsAppComponent]
 })
