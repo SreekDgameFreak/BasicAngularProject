@@ -13,7 +13,7 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
 import{ appRoutes } from './routes';
 import { CreateEventComponent } from './events/create-event/create-event.component';
 import { ErrorNotFoundComponent } from './errors/error-not-found.component';
-
+import { EventListResolverService } from './events/event-list-resolver.service'
 
 @NgModule({
   imports: [
@@ -37,7 +37,8 @@ import { ErrorNotFoundComponent } from './errors/error-not-found.component';
     {
       provide: 'canDeactivateCreateEvent' , 
       useValue: checkDirtyState
-    }
+    },
+    EventListResolverService
   ],
   bootstrap: [EventsAppComponent]
 })
