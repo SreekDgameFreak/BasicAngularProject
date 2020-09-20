@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IEvent } from './shared';
 
 @Component({
   selector: 'event-thumbnail',
@@ -17,7 +18,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class EventThumbnailComponent implements OnInit {
   
   //Used to pass information from Parent to child
-  @Input() event: any;
+  @Input() event: IEvent;
   //Used to pass information to Parent from Child
   // @Output() eventClick = new EventEmitter();
   // clickedMe: number = 0;
