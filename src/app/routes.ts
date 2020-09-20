@@ -1,11 +1,12 @@
-import { Routes } from '@angular/router'
-
-import { EventsListComponent } from './events/events-list.component'
-import { EventDetailsComponent } from './events/event-details/event-details.component'
-import { CreateEventComponent } from './events/create-event/create-event.component'
-import { ErrorNotFoundComponent } from './errors/error-not-found.component'
-import { EventRouteActivatorService } from './events/event-details/event-route-activator.service'
-import { EventListResolverService } from './events/event-list-resolver.service'
+import { Routes } from '@angular/router';
+import {
+    EventsListComponent,
+    EventDetailsComponent,
+    CreateEventComponent,
+    EventRouteActivatorService,
+    EventListResolverService
+} from './events/index';
+import { ErrorNotFoundComponent } from './errors/error-not-found.component';
 
 export const appRoutes:Routes = [
     {
