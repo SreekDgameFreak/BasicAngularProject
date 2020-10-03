@@ -7,6 +7,7 @@ import {
     EventListResolverService
 } from './events/index';
 import { ErrorNotFoundComponent } from './errors/error-not-found.component';
+import { CreateSessionComponent } from './events/event-details/create-session.component';
 
 export const appRoutes:Routes = [
     {
@@ -20,6 +21,9 @@ export const appRoutes:Routes = [
     {
         path : 'events/:id', component: EventDetailsComponent , 
         canActivate:[EventRouteActivatorService]
+    },
+    {
+        path : 'events/sessions/new', component: CreateSessionComponent
     },
     {
         path : '404', component: ErrorNotFoundComponent
